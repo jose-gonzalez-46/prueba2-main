@@ -69,26 +69,20 @@
         <div class="row text-center">
             <h3>Catalogo</h3>
         </div>
-        <div class="row">
-            <button type="button" class="btn btn-primary" id="enviar">Cargar catalogo </button>
-        </div>
+        
         <div class="row">
             <table class="table" id="results">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombre</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Imagen</th>
-                        <th scope="col">Descripción</th>
+                        <th scope="col">Nombre</th>
                     </tr>
                 </thead>
             </table>
         </div>
     </div>
 
-
-
-    
 
 
     <footer>
@@ -140,11 +134,11 @@
 
 
     <script>
-        $("#enviar").click(function(){
+        $(document).ready(function(){
             $.get("https://api.unsplash.com/search/photos?query=flower&client_id=KMB0KqaB62w-A-MGTMFyi4n7OECVtTcqwa7AaIxrikE", 
                 function(data){
                     $.each(data.results, function(i, item){
-                        $("#results").append("<tr><td>" + item.id + "</td><td>" + item.description + "</td><td> <img src='" + item.urls.small_s3 + "'>" + "</td><td>" + item.alt_description + "</td></tr>")
+                        $("#results").append("<tr><td>" + item.id +  "</td><td>" + item.alt_description + "</td><td> <img src='" + item.urls.small_s3 + "'>" + "</td></tr>")
                     });
 
                 });
