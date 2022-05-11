@@ -15,52 +15,49 @@
 <body>
 
     </div>
+    <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark  bg-success">
-      <a name="inici"></a>
-      <div class="container-fluid">
-          <img src="flower1.svg" alt="Logo flor " width="30" height="24">
-          <a class="navbar-brand" href="#">Comunidad Floral</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                  </li>
+        <div class="container-fluid">
+            <img src="flower1.svg" alt="Logo flor " width="30" height="24">
+            <a class="navbar-brand" href="index.html">Comunidad Floral</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
 
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorias
-              </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="Flores.html">Flores</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="Maceteros.html">Maceteros</a></li>
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li><a class="dropdown-item" href="Fertilizante.html">Fertilizante</a></li>
-                      </ul>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
-                  </li>
-                  <li class="nav-item">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Flores.html">Flores</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Maceteros.html">Maceteros</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Fertilizante.html">Fertilizante</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="Catalogo.html">Catalogo</a>
                   </li>
+                </ul>
 
-              </ul>
-
-
-
-
-          </div>
-      </div>
-  </nav>
-  </div>
+            </div>
+        </div>
+    </nav>
+    </div>
 
     <!--Formulario Contacto-->
 
@@ -88,6 +85,11 @@
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellido">
           </div>
 
+          <div class="form-group">
+            <label for="rut">Rut</label>
+            <input type="text" class="form-control" id="rut" name="rut" required oninput="checkRut(this)" placeholder="Ingresa tu rut">
+            <script src="validarRUT.js"></script>
+          </div>
           
           <div class="form-group">
             <label for="telefono">Número Contacto</label>
@@ -99,9 +101,26 @@
             <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
           </div>
 
+          
+
           <div class="form-group">
             <label for="cuidad">Cuidad</label>
-            <input type="text" class="form-control" id="cuidad" name="cuidad">
+            <input type="text" class="form-control" id="cuidad" name="cuidad" placeholder="Cuidad de residencia">
+          </div>
+
+          <div class="form-group">
+            <label for="contrasena" class="form-label">Crea una contraseña</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Debe contener mínimo 6 caracteres y un número">
+          </div>
+
+          <div class="form-group">
+            <label for="contrasena2" class="form-label">Repita contraseña</label>
+            <input type="password" class="form-control" id="contrasena2" placeholder="Repite la contraseña">
+          </div>
+
+          <div class="form-group">
+            <label for="captcha">AHUDHUS</label>
+            <input type="text" class="form-control" id="captcha" name="captcha" placeholder="Ingresa captcha">
           </div>
 
           <div class="form-group">
@@ -109,6 +128,7 @@
             <textarea class="form-control" id="comentario" rows="7" placeholder="Déjanos tu comentario y ayúdanos a mejorar nuestro servicio. Gracias por tu Visita."></textarea>
           </div>
 
+          
 
 
           <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
@@ -142,7 +162,6 @@
                     <li class="mb-2"><a href="Maceteros.html">Maceteros</a></li>
                     <li class="mb-2"><a href="Fertilizante.html">Fertilizantes</a></li>
                     <li class="mb-2"><a href="Catalogo.html">Catalogo</a></li>
-                    
                   </ul>
                 </div>
 
@@ -194,6 +213,10 @@
                 //se valida que el nombre no este vacio
                 mensaje = "El campo no debe estar en blanco";
               }
+              
+              
+                      
+
               if($("#email").val().trim().length==0){
                 
                 mensaje = "El email esta en blanco";
@@ -202,6 +225,24 @@
                 
                 mensaje = "El campo cuidad esta en blanco";
               }
+
+              if($("#contrasena").val().trim().length < 6 ){
+
+                mensaje = "La contraseña debe tener mínimo 6 caracteres";
+
+                  
+              }
+              
+              if($("#contrasena").val() != $("#contrasena2").val()){
+
+                mensaje = "La contraseña no coindice";
+              }
+
+              if($("#captcha").val() != 'AHUDHUS'){
+
+                mensaje = "La captcha no coincide";
+              }
+
               if($("#comentario").val().trim().length==0){
                 
                 mensaje = "Escribe un comentario";
